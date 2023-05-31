@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+  <title>Zara</title>
+  <style>
+    body {
+      font-family: 'Rockwell', 'Segoe UI';
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: powderblue;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .logo {
+      flex-grow: 1;
+    }
+
+    .logo img {
+      padding-top: 10px;
+      padding-left: 10px;
+      width: 100px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-left: 20px;
+      font-size: larger;
+      font-weight: bolder;
+    }
+
+    nav a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: rgb(192, 73, 192);
+    }
+
+    .container {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 8px 12px;
+      border: none;
+      border-bottom: 2px solid #000000;
+      outline: none;
+      background-color: transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input[type="text"]::placeholder,
+    .form-group input[type="password"]::placeholder {
+      color: #888;
+    }
+
+    .form-group .password-container {
+      position: relative;
+    }
+
+    .form-group .password-toggle {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .form-group .password-toggle i {
+      font-size: 14px;
+      color: #1cd1ce;
+    }
+
+    .form-group .password-toggle i:hover {
+      color: #000;
+    }
+
+    .form-group input[type="submit"] {
+      width: 50%;
+      padding: 10px;
+      border: none;
+      background-color: powderblue;
+      color: #fff;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: rgb(129, 241, 241);
+    }
+
+    .slider {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+    }
+
+    .slick-prev,
+    .slick-next {
+      font-size: 20px;
+      color: #000;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+      color: #1cd1ce;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+
+    .slick-prev:before {
+      content: "\f104";
+    }
+
+    .slick-next:before {
+      content: "\f105";
+    }
+
+    p {
+      margin-top: 20px;
+      margin-left: 20px;
+      font-family: 'Segoe UI', 'Rockwell';
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="2560px-Zara_Logo.svg.png" alt="Zara Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shopping Cart</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Shopping Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="slider">
+      <div><img src="IMAGE-landscape-fill-b593c548-a41a-4f3f-9cec-c255d6254cf4-default_0.jpg" alt=""></div>
+      <div><img src="IMAGE-landscape-fill-a4c68163-7685-48ba-ae36-5a8ea9016445-default_0.jpg" alt=""></div>
+      <div><img src="IMAGE-landscape-fill-716dd8ff-0bad-43d0-94e9-dfc0341c831e-default_0.jpg" alt=""></div>
+    </div>
+
+    <h2>Sign In</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+          <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></span>
+        </div>
+      </div>
+      <div class="form-group" style="text-align: center;">
+        <input type="submit" value="Sign In">
+        <br>
+        <br>
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+  </div>
+  <p>Zara is a website for shopping clothes online, specializing in fast fashion. It offers clothing, accessories, shoes, beauty products, and perfumes.</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.slider').slick({
+        dots: false,
+        arrows: true,
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+        autoplay: true,
+        autoplaySpeed: 2000
+      });
+    });
+
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordToggle = document.querySelector(".password-toggle");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordToggle.innerHTML = '<i class="fa fa-eye-slash"></i>';
+      } else {
+        passwordInput.type = "password";
+        passwordToggle.innerHTML = '<i class="fa fa-eye"></i>';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
